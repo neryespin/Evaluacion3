@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ejercicio 2 - Evaluación U3</title>
+     <link rel="stylesheet" href="/static/estilos.css">
+   </head>
+<body>
+    <div class="container">
+        <h1>Formulario de Nombres</h1>
+        <form method="post" action="/ejercicio2">
+            <div class="form-group">
+                <label>Nombre 1:</label>
+                <input type="text" name="nombre1" required>
+            </div>
+            <div class="form-group">
+                <label>Nombre 2:</label>
+                <input type="text" name="nombre2" required>
+            </div>
+            <div class="form-group">
+                <label>Nombre 3:</label>
+                <input type="text" name="nombre3" required>
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+
+        {% if nombre %}
+            <div class="resultado">
+                <!-- <h2>Resultado:</h2> -->
+                <p>El nombre con mayor cantidad de caracteres es: {{ nombre }}</p>
+                <p>El nombre tiene: {{ longitud }} caracteres</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
